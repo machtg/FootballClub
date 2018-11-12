@@ -73,4 +73,18 @@
         </item>
     </string-array>
 
+    <string name="title_activity_home">Football App</string>
+    <string name="title_club">Clubs</string>
+    <string name="title_match">Matches</string>
+    <string name="title_favorite">Favorites</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="favorite_fragment">Hello favorite fragment</string>
+
+    <string name="prev_match">Prev Match</string>
+    <string name="next_match">Next Match</string>
+
+    <string name="club_image_default">Club Image</string>
+    <string name="club_name_default">Club Name</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>

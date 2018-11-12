@@ -4,9 +4,9 @@ import android.view.Gravity
 import android.widget.LinearLayout
 import org.jetbrains.anko.*
 
-class DetailsActivityUI(private var list: Club) : AnkoComponent<DetailsActivity> {
+class ClubDetailsActivityUI(private var list: Club) : AnkoComponent<ClubDetailsActivity> {
 
-    override fun createView(ui: AnkoContext<DetailsActivity>) = with(ui){
+    override fun createView(ui: AnkoContext<ClubDetailsActivity>) = with(ui){
         linearLayout{
             orientation = LinearLayout.VERTICAL
             lparams(matchParent, matchParent)

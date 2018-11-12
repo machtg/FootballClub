@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
 import org.jetbrains.anko.*
 
-class DetailsActivity : AppCompatActivity() {
+class ClubDetailsActivity : AppCompatActivity() {
 
     private lateinit var nameTextView: TextView
 
@@ -18,6 +18,6 @@ class DetailsActivity : AppCompatActivity() {
 
         val list = intent.getParcelableExtra<Club>("club")
 
-        DetailsActivityUI(list).setContentView(this)
+        ClubDetailsActivityUI(list).setContentView(this)
     }
 }
