@@ -1,8 +1,9 @@
-package com.maclaurin.footballclub
+package com.maclaurin.footballclub.ui.home
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
+import com.maclaurin.footballclub.R
 
 
 class HomeActivity : AppCompatActivity() {

@@ -1,10 +1,12 @@
-package com.maclaurin.footballclub
+package com.maclaurin.footballclub.ui.clubdetails
 
 import android.view.Gravity
 import android.widget.LinearLayout
+import com.maclaurin.footballclub.model.Team
+import com.squareup.picasso.Picasso
 import org.jetbrains.anko.*
 
-class ClubDetailsActivityUI(private var list: Club) : AnkoComponent<ClubDetailsActivity> {
+class ClubDetailsActivityUI(private var teams: Team) : AnkoComponent<ClubDetailsActivity> {
 
     override fun createView(ui: AnkoContext<ClubDetailsActivity>) = with(ui){
         linearLayout{
@@ -13,7 +15,7 @@ class ClubDetailsActivityUI(private var list: Club) : AnkoComponent<ClubDetailsA
 
             imageView{
                 padding = dip(10)
-                setImageResource(list.image)
+                Picasso.get().load(teams.teamBadge).into(this)
                 this@linearLayout.gravity = Gravity.CENTER_HORIZONTAL
             }.lparams{
                 height = dip(100)
@@ -22,16 +24,19 @@ class ClubDetailsActivityUI(private var list: Club) : AnkoComponent<ClubDetailsA
 
             textView {
                 textSize = 16f
-                text = list.name
+                text = teams.teamName
             }.lparams{
                 margin = dip(2)
             }
 
-            textView {
-                textSize = 12f
-                text = list.info
-            }.lparams{
-                margin = dip(10)
+            scrollView {
+                textView {
+                    bottomPadding = dip(15)
+                    textSize = 12f
+                    text = teams.teamDescription
+                }.lparams {
+                    margin = dip(10)
+                }
             }
 
         }

@@ -4,7 +4,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
              android:background="@color/green"
-             tools:context=".MatchFragment">
+             tools:context=".ui.home.MatchFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.constraint.ConstraintLayout
@@ -30,6 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/tab_layout"
+                android:id="@+id/spinner_match"
         />
 
     </android.support.constraint.ConstraintLayout>

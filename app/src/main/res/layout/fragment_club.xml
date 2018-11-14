@@ -2,27 +2,42 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
-             android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_height="match_parent"
              android:background="@color/blue"
-             tools:context=".ClubFragment">
+             tools:context=".ui.home.ClubFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh_club"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <Spinner
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinner_club"/>
 
-        <android.support.v7.widget.RecyclerView
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@id/spinner_club"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/spinner_club"
-                android:id="@+id/rv_club"/>
+                android:id="@+id/rv_club">
+            </android.support.v7.widget.RecyclerView>
 
-    </android.support.constraint.ConstraintLayout>
+            <ProgressBar
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/spinner_club"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar_club"/>
 
+        </RelativeLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </FrameLayout>

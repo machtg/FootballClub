@@ -1,8 +1,9 @@
-package com.maclaurin.footballclub
+package com.maclaurin.footballclub.ui.clubdetails
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
+import com.maclaurin.footballclub.model.Team
 import org.jetbrains.anko.*
 
 class ClubDetailsActivity : AppCompatActivity() {
@@ -16,7 +17,7 @@ class ClubDetailsActivity : AppCompatActivity() {
             nameTextView = textView()
         }
 
-        val list = intent.getParcelableExtra<Club>("club")
+        val list = intent.getParcelableExtra<Team>("teams")
 
         ClubDetailsActivityUI(list).setContentView(this)
     }
